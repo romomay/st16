@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>용어 정의 목록</title>
+</head>
+<body>
+  <!-- 디스크립션=디피니션 -->
+   <p>
+    용어정의,저자 등 dl태그<br>
+    dl은 자식  dt,dd 
+    <!-- dl>dt+dd -->
+    <dl>
+      <dt>작곡가</dt>
+      <dd>홍길동</dd>
+      <dd>홍길동2</dd>
+      <dd>유명한 작곡가</dd>
+      <!-- ctrl+alt+방향키 -->
+    </dl>
+    <!-- dl>dt*2+dd*2-->
+     <!-- emmet기호 >부모>자식 +(형제) 형+동생 *반복 -->
+      <!--  di 여러개의 dt자식으로 가질 수 있다
+        dt는 dd를 여러개의 동생으로 가질 수 있다 -->
+        <dl>
+          <dt></dt>
+          <dt></dt>
+          <dd></dd>
+          <dd></dd>
+        </dl>
+        <!-- dl>(dt+dd*2)*2 -->
+        <dl>
+          <dt>작곡가</dt>
+          <dd>홍길동</dd>
+          <dd>최은정</dd>
+          <dt>작사가</dt>
+          <dd>이미나</dd>
+          <dd>유명한</dd>
+        </dl>
+   </p>
+</body>
+</html>
