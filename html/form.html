@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+<body>
+  <form action="">
+<fieldset>
+  <legend>필드셋의 제목</legend>
+  <p>
+    <label for="">이름</label>
+    <input type="text" id="user_name">
+  </p>
+  <p>
+    <label>
+      비밀번호 <input type="password">
+
+    </label>
+  </p>
+  <p>
+    <label for="">전화번호</label>
+    <input type="tel" name="" id="">
+  </p>
+</fieldset>
+<fieldset>
+  <legend>라디오버튼</legend>
+  <!-- 태그에 이름을 지정하는방법은 class.id, name  -->
+  <div>
+    <input type="radio" name="adress" id="adress1"><label for="adress1">집</label>
+    <input type="radio" name="adress" id="adress2"><label for="adress2">학교</label>
+    <input type="radio" name="adress" id="adress3"><label for="adress3">회사</label>
+  </div>
+</fieldset>
+<fieldset>
+  <legend>
+    <div>
+      <p class="title">취미</p>
+
+      <label for="habbit1">독서</label>
+      <input type="checkbox" name="habbit" id="habbit1">
+    
+      <label for="habbit2">독서</label>
+      <input type="checkbox" name="habbit" id="habbit2">
+
+    </div>
+  </legend>
+</fieldset>
+<fieldset>
+  <legend>다양한버튼</legend>
+  <div>
+    <input type="reset" value="취소">
+    <input type="submit" value="확인">
+    <input type="button" value="버튼">
+  </div>
+  <div>
+    <input type="file" >
+  </div>
+</fieldset>
+  </form>
+
+</body>
+</html>
