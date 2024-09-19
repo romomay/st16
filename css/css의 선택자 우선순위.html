@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css선택자 우선순위</title>
+  <style>
+    /* 문서내 모든 .section에 적용 .section{} */
+    /* 선택자의 한칸 띄어쓰기는 후손, 값의 띄어쓰기는 여려개의 값이 있다는것 */
+    .section{
+      border: 1px solid #864;
+      background-color: #c49a6f;
+      padding: 20px 20px;
+    } 
+    /* .wrap .inner 
+    문서내 모든 .wrap의 후손 중 .ineer
+    .wrap > inner 
+    문서내 모든 클래스 wrap의 직계자식  .ineer
+     */
+     .wrap > .inner{
+      background-color: #ccc;
+     }
+     .wrap .inner{
+      background-color: #660;
+     }
+     /* 섹션1에 대한 p를 찾을때
+      .section p{} 문서내 모든 섹션 찾아서 그중 후손중  모든p선택
+      #section1 p{} 문서내 모든 #section1찾아서 그중 후손 중 모든 p선태ㅏㄱ*/
+      .section p{
+        background-color: #ccc;
+      }
+      #section1 p{
+        background: #f00;
+      }
+  </style>
+</head>
+<body>
+  <!-- .wrap>div.section#section$*2>div.inner>p>{section$-item} -->
+   <div class="wrap">
+    <div class="section" id="section1">
+      <div class="inner">
+        <p>section1-item</p>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="inner">
+        <p>section2-item</p>
+      </div>
+    </div>
+   </div>
+   
+  
+</body>
+</html>

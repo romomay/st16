@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css형식1</title>
+  <!-- html코멘트 -->
+  <style>
+/*css코멘트*/
+/*css의 구문형식
+선택자{속성:값1 값2 값3; 솟성:값;}
+선택자{
+속성:값1 값2 값3; 
+속성:값;
+속성:값;}
+*/
+/*태그 선택자 body*/
+body{background-color:#864 ;color:yellow;margin:0;}
+/*클래스2 선택자*/
+.section2{
+  background-color: #ccc;
+}
+/*아이디선택자 #wrap*/
+#wrap{color: black;}
+/* .main.section>dov{} 
+.main 클래스 main 
+ㅁ(공백) 후손
+.section 클래스 section>직계자식 div
+클래스 main 후손중 클래스 sextion 직계자식 div 선택
+*/
+.main .section > div{
+  background-color: #f00;
+}
+/* 클래스 메인중 직계자식 div */
+.main > div{
+  background-color: #0f0;
+}
+/* 킁래스 main후손중 div선택자 */
+.main div{
+  background-color: #00f;
+}
+  </style>
+</head>
+<body>
+  <!-- #wrap -->
+  <div id="wrap">
+    <!-- div.header -->
+    <div class="header"></div>
+    <!-- ctrl+enter  vscode 커서만 이동하는 줄바꿈 -->
+     <!-- div.main -->
+     <div class="main"></div>
+     <!-- section.section.section$*3 -->
+     <!-- section.section.section$*3>div.inner>p*3>{아이템$} -->
+     <section class="section section1">
+      <div class="inner">
+        <p>아이템1</p>
+        <p>아이템2</p>
+        <p>아이템3</p>
+      </div>
+     </section>
+     <section class="section section2">
+      <div class="inner">
+        <p>아이템1</p>
+        <p>아이템2</p>
+        <p>아이템3</p>
+      </div>
+     </section>
+     <section class="section section3">
+      <div class="inner">
+        <p>아이템1</p>
+        <p>아이템2</p>
+        <p>아이템3</p>
+      </div>
+     </section>
+  </div>
+</body>
+</html>
