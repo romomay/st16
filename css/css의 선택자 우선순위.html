@@ -24,10 +24,10 @@
       background-color: #660;
      }
      /* 섹션1에 대한 p를 찾을때
-      .section p{} 문서내 모든 섹션 찾아서 그중 후손중  모든p선택
-      #section1 p{} 문서내 모든 #section1찾아서 그중 후손 중 모든 p선태ㅏㄱ*/
+      .section p{} 문서내 모든 .section 찾아서 그중 후손 중  모든p선택
+      #section1 p{} 문서내 모든 #section1찾아서 그 후손 중 모든 p선택*/
       .section p{
-        background-color: #ccc;
+        background-color: #53b600;
       }
       #section1 p{
         background: #f00;
@@ -36,6 +36,10 @@
 </head>
 <body>
   <!-- .wrap>div.section#section$*2>div.inner>p>{section$-item} -->
+   <!-- 이름은 여러개가 가능, 아이디는 유일함 
+  태그 class="이름 이름 이름">내용</태그>
+    태ㅏ그 id="이름">내용></태그>
+   -->
    <div class="wrap">
     <div class="section" id="section1">
       <div class="inner">

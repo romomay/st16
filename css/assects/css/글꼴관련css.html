@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글꼴관련css</title>
+  <style>
+    span.title{
+      font-weight: 600;
+    }
+    section{
+      background-color: #ccc;
+      color: #00f;
+      /* font-size: 100%; 
+      font-size: 14px;    10.5pt
+      font-size: 0.875%;  
+      font-size: 0.875em;*/ /*16px->1em 계산하는 방법*/
+      font-size: 1em;
+      /* line-height: 100%; */
+      /* line-height: normal;  */
+      line-height: 1.4; 
+    }
+    span{
+      color: #f00;
+    }
+    .title{
+      font-weight: 800;
+    }
+   .section2 span{
+      color: #0f0;
+    }
+    body{
+      color: magenta;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- section.section$*3>p>lorem -->
+  <section class="section1">
+    <p>Lorem <span class="title">ipsum</span> dolor sit amet consectetur adipisicing elit. Assumenda dicta omnis voluptatum repellat! Adipisci similique voluptatum quo omnis quam, possimus facere ipsam accusantium architecto tenetur modi eum quibusdam magni! Atque.</p>
+  </section>
+  <section class="section2">
+    <p>Ad nostrum <span>fugit</span> aliquam aspernatur. Illo dolorum officiis animi, iure totam perferendis assumenda aspernatur quae officia repellat voluptates similique, tempore quas! Nihil deserunt tenetur repellat earum voluptas architecto cum dolorum.</p>
+  </section>
+  <section class="section3">
+    <p>Beatae <span>magnam</span>, officiis commodi ipsam quis unde reprehenderit non! Maxime pariatur hic ex, soluta amet distinctio laudantium laborum tempora rem sint eligendi dolorum, repellendus at impedit consequatur modi inventore reiciendis!</p>
+  </section>
+<!-- p>a>{글꼴을 상속받지 않는 a태그} -->
+ <!-- a태그의 글자색을 지정하려면 조상아닌  a태그  본인에게 color지정 -->
+<p><a href="">글꼴을 상속받지 않는 a태그</a></p>
+<!-- p>lorem -->
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa minus, debitis consequatur architecto accusamus sed fuga dolor totam commodi ab cum at expedita consectetur ex numquam mollitia assumenda aliquam impedit.</p>
+</body>
+</html>
