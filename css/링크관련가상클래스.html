@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>링크관련 가상클래스</title>
+</head>
+<body>
+  <!-- ul>li*3>a>{링크} -->
+  <ul>
+    <li><a href="http://www.naver.com">링크 네이버</a></li>
+    <li><a href="http://www.google.com">링크 구글</a></li>
+    <li><a href="http://www.daum.net">링크 다음</a></li>
+  </ul>
+  <style>
+    /* :가상선택자 ::가상선택자 
+    a:link{color:coral ;}
+    a:visited{color: coral;}
+    a:hover{color: #000;}
+    a:active{color: coral;}
+    /* 키보드 tab클릭하면 확인가능 
+    a:focus{color: #000;}*/
+    
+    a:link,
+    a:visited,
+    a:active{
+      color:coral; 
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    a:hover,
+    a:focus{color: #f06;}
+
+    body{
+      color: magenta;
+    }
+    
+  </style>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores natus cum optio, veritatis culpa suscipit aperiam praesentium, sit odit, iure nam facere aut distinctio vel minus sed eaque dolor a.</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css선택자 우선순위</title>
+  <style>
+    /* 문서내 모든 p선택, 동일한 요소에 적용하면 마지막 css적용*/
+    /* !important가 최고 우선순위로 적용 */
+p{
+  background-color: #ccc !important;
+  border: 1px solid #000;
+}
+p{
+  background-color: #f00;
+}
+ #section1 P{
+  background-color: #486;
+}
+ .section P{
+  background-color: #0F0;
+}
+
+  </style>
+</head>
+<body>
+  <!-- .wrap>div.section#section$*2>div.inner>p>{section$-item} -->
+
+   <div class="wrap">
+    <div class="section" id="section1">
+      <div class="inner">
+        <p style="background-color: #ff0;">section1-item</p>
+        <p>section1-item</p>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="inner">
+        <p>section2-item</p>
+      </div>
+    </div>
+   </div>
+   
+  
+</body>
+</html>
