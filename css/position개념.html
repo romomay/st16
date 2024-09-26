@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position개념</title>
+ <style>
+  *{margin: o; padding: 0;} 
+  .wrap{
+    /* 박스3의 기준요소 */
+    position: relative;
+    /* margin의 기준요소 좌표에 포함되지않음 */
+    margin: 50px;
+     /* padding은 absolute의 좌표에 포함되요 */
+     padding:50px;
+      background-color: #ccc;
+  }
+    .box{
+      box-sizing: content-box;
+      /* box-sizing: border-box; */
+      width:200px; height: 200px;
+      /* margin:20px;  */
+      padding:20px;
+      border:10px solid #000;
+    }
+    .box-p{
+      background-color: rgb(255,255, 102,0.2);
+    }
+  .box-c{
+    /* width를 선언하지 않으면 width:auto */
+    height: 100px;
+    background-color: #66f;
+    position: absolute;
+    /*  position: absolute를 주면 부모 box-p 너비를 가져오지 못함 */
+    /* 기준요소는 가까운 조상부터 position: static제외한 포지션 값을 가진 조상이 기준요소
+    margin제외 border 제외 한 0,0 */
+    left: 0px; top: 0px;
+  }
+  .box1{
+    position: 200px;
+    left: 200px; top:200px;
+  }
+  .box2{ 
+    /* z-index 적용
+    left right top bottom 적용
+    기준 본인 원래 위치
+    일반 흐름을 유지
+    ★★★★★position: absolute의 기준요소가 될수 있어요★★★★★
+    */
+    position: relative;
+    /* left: 200px; top:200px; */
+  }
+  .box3{ 
+    /* 
+    position: absolute;는 일반흐름에서 제외
+    부모요소가 box3을 인식못함
+    ★★★★★기준요소 시작 해당 0.0 ★★★★★
+    */
+    /* 조상들에게  position: static;을 제외한 position값을 지정한게 없으며 body가 기준요소 */
+    position: absolute;
+    left: 0; top: 0;
+  }
+ </style>
+</head>
+<body>
+  <div class="wrap">
+  <!-- .box.box$*4.box-p>.box-c>{box$} -->
+  <div class="box box1 box-p">
+    <div class="box-c">box1</div>
+  </div>
+  <div class="box box2 box-p">
+    <div class="box-c">box2</div>
+  </div>
+  <div class="box box3 box-p">
+    <div class="box-c">box3</div>
+  </div>
+  <div class="box box4 box-p">
+    <div class="box-c">box4</div>
+  </div>
+</div>
+</body>
+</html>
