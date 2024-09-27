@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지크기지정object-fit</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      margin: 20;
+      background-color: #ff0;
+      border: 1px solid #f00;
+    }
+    .mdia-wrap{
+      background-color: #6ff;
+      border: 1px solid #00f;
+    }
+    .mdia-wrap .img{
+      /* 원래 이미지 크기1900x1121 */
+      width: 300px;
+      height: 400px;
+    }
+    .mdia-wrap .img1{
+      /* 원래 이미지 크기1900x1121 */
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+      /* 원래 이미지의 비율을 유지한채 지정된 이미지 크기에 꽉 채워서 표시 */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+  <div class="mdia-wrap">
+    <img class="img" src="./background/images/bg.jpg" alt="">
+    <img class="img1" src="./background/images/bg.jpg" alt="">
+  </div>
+
+  </div>
+</body>
+</html>
