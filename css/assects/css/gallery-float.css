@@ -5,11 +5,19 @@
 /* reset */
 *{margin:0; padding: 0; 
   box-sizing: border-box;}
+  ul,ol,li{list-style: none;}
 
 .wrap{
   margin:50px;
 }
 
+/* 갤러리 레이아웃 float */
+.card__list  {}
+.card__list ul.card__wrap{}
+.card__list li.card__item{}
+.card__list div.card{}
+
+/* 카드디자인 */
 .card{
   width:300px;
   border: 1px solid #efefef;
