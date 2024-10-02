@@ -28,6 +28,34 @@
       object-position: center center;
      } 
 
+
+     /* flex-layout로 변경 */
+      /* float를 위한 설정
+      .card__list li.card__item {
+      float: left;
+      width: calc(25% -(10px + 10px));
+      margin: 10px;
+      */
+
+     
+
+      /* flex 선언 */
+      .card__list ul.card__wrap{
+        display: flex;
+        /* flex-direction : row */
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+       .card__list li.card__item{
+        float: none;   /* float 무력화 */
+        margin: 0;  /*컨테이너에게 gap:20px을 주기 위해*/
+        /* flex:auto; */
+        /* flex: auto    ->  flex: 1 1 auto 동일  */
+        flex: none;
+
+      }
   </style>
 </head>
 <body>
