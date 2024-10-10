@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale">
+  <title>그리드기본</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    body{
+      --grid-item--bg:#6ff;
+    }
+    .wrap{margin: 20px;}
+    .container{
+      background-color: #ff6;
+      border: 4px solid #ccc;
+    }
+    /* grid */
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr 5fr;/* 6조각 1번짹 컬럼에서 한조각쓰고 두번째 컬럼에서 5개쓴다*/
+      grid-template-rows: 100px minmax(400px, auto) 100px;
+      grid-template-areas: 
+      /* 템플릿 영역이름지정/ 클래스명 아님 */
+      "hd hd " /* 1row */
+      "side content"   /* 2row */
+      "footer footer"  /* 3row */
+      ;
+      gap: 4px;
+    }
+
+    /* grid-item */
+    .header{
+      grid-area: hd;
+      background-color: var(--grid-item--bg);}
+    .lnb{
+      grid-area: side;
+      background-color: var(--grid-item--bg);}
+    .content{
+      grid-area: content;
+      background-color: var(--grid-item--bg);}
+    .footer{
+      grid-area: footer;
+      background-color: var(--grid-item--bg);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container grid-container">
+    <header class="header">header</header>
+    <aside class="lnb">side</aside>
+    <main class="content">content</main>
+    <footer class="footer">footer</footer>
+    </div>
+  </div>
+</body>
+</html>
