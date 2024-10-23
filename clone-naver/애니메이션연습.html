@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    img{width: 100%;}
+    .cont__item{
+      margin: 150px;
+    }
+    /* transform */
+    .cont__item{
+      position: relative;
+      border: 1px solid #ccc;
+      padding:2rem 0 ;
+    }
+    .thumb-box{
+      position: absolute;
+      width: 200px; height: 200px;
+      border: 1px solid#f00;
+      /* 기준요소의 가로 세로 가운데 */
+      left: 50%; top: 50;
+      /* transform: translate(x,y); */
+      transform: translate(-50%,-50%);
+      overflow: hidden;/* 내 크기보다 넘쳐나는건 보이지마 */
+    }
+    .thumb-box img{
+      transform: translate(100%,0);
+      /* animation: imgAni 0.5s forwards; */
+      animation: imgAni 0.5s forwards cubic-bezier(0, 0, 0.67, 1.33);
+      /* 개발자 도구 스타일에서 ease 보라색체크해지하면 속도조절해서 볼수있음 */
+    }
+    @keyframes imgAni{
+      from{
+        transform: translate(100%,0);
+      }
+      to{
+        transform: translate(0,0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cont__item">
+    <div class="thumb-box">
+     <img src="./img/pc/main-shortcut-1.png">
+    </div>
+  </div>
+</body>
+</html>
