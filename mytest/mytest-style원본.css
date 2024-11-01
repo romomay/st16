@@ -98,27 +98,27 @@
 
  /* footer bt-sns 끝 */
 
- /* 아키테이블 footer 디자인 수정 */
+ /* 루미너스 footer 디자인 수정 */
 
- /* //아키테이블 footer 디자인 수정 */
+ /* //루미너스 footer 디자인 수정 */
 #footer{
-  background-color: #000;
+  background-color: #3a3a3a;
 }
 #footer .inner{
   color:#cfcfcf;
 }
-#footer .bt_info .bt_title{
+#footer .bt_info .title{
   display: none;
 }
 /* 글자색상변경 */
 #footer .inner .bt_logo a,
-#footer .inner .inner_t .info_right .bt_util ul li a,
-#footer .inner .inner_b .bt_copyright,
-#footer .inner .inner_t .info_left .bt_info .bt_info_list,
-#footer .inner .inner_t .info_right .wrap_cs .cs_center_txt,
-#footer .inner .inner_t .info_right .wrap_cs .bank_txt,
-#footer .inner .inner_t .info_left .sns_txt a,
-#footer .inner .inner_t .info_right .wrap_cs .bt_tel{
+#footer .inner .bt_util ul li a,
+#footer .inner .bt_util ul li a strong,
+#footer .inner .bt_info .bt_info_list,
+#footer .inner .bt_wrap2 .bt_copyright,
+#footer .inner .bt_wrap .bt_boardinfo li a,
+#footer .inner .bt_cscenter .bt_txt01,
+#footer .inner .bt_cscenter .bt_txt02{
   color:inherit;
 }
 /* [속성="값"] */
@@ -128,71 +128,78 @@
 }
 #footer .bt_info .bt_info_list [data-ez-item="company_name"]{ order:1;}
 #footer .bt_info .bt_info_list [data-ez-item="president_name"]{ order:2;}
-#footer .bt_info .bt_info_list [data-ez-item="address"]{ order:4;}
-#footer .bt_info .bt_info_list [data-ez-item="phone"]{ order:5;}
+#footer .bt_info .bt_info_list [data-ez-item="address"]{ order:5;}
+#footer .bt_info .bt_info_list [data-ez-item="phone"]{ order:6;}
 #footer .bt_info .bt_info_list [data-ez-item="company_regno"]{ order:3;}
-#footer .bt_info .bt_info_list [data-ez-item="network_regno"]{ order:6;}
+#footer .bt_info .bt_info_list [data-ez-item="network_regno"]{ order:4;}
 #footer .bt_info .bt_info_list [data-ez-item="cpo_name"]{ order:7;}
 
-#footer .bt_info .bt_info_list [data-ez-item="network_regno"] span:first-child{
+#footer .bt_info .bt_info_list [data-ez-item="company_name"] span:first-child{
   display: none;
 }
-
-#footer .inner .inner_t{
-  justify-content: left;
-}
-
-#footer .inner .inner_t .info_left .sns_txt .bt_title{
+#footer .bt_info .bt_info_list [data-ez-item="address"] span:first-child{
   display: none;
 }
-#footer .inner .inner_t .info_left .sns_txt {
-  margin-top: 20px;
-}
-#footer .inner .inner_t .info_left .bt_logo a {
+#footer .inner .bt_bank{
   display: none;
 }
-
-#footer .bank_txt .bt_title{
-  display: none;
-}
-#footer .inner .inner_t .info_right .wrap_cs .bt_title{
-  display: none;
-}
-
-#footer .inner .inner_t .info_right .wrap_cs .bt_tel > strong{
-  display: none;
-}
-#footer .inner .inner_t .info_right .bt_util ul{
-  display: none;
-}
-
-#footer .inner .inner_t .info_right .wrap_cs .bank_txt{
-  display: none;
-}
-#footer .inner .inner_t .info_right .wrap_cs .bt_tel{
-  font-size: 30px;
-}
-
 
 #footer .inner .bt_wrap .bt_boardinfo{
   margin-left:auto;
   width: 180px;
 }
-
-#footer .inner .inner_b {
-  border-top: 1px solid rgba(255, 255, 255, 0.30);
-  font-size: 1px;
-  padding-top: 40px;
-  justify-content:left;
+#footer .inner .bt_wrap .bt_boardinfo .title{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 11px;
 }
-#footer .inner .inner_b .bt_copyright{
-  padding-left: 30px;
+#footer .inner .bt_wrap .bt_boardinfo li a {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  line-height: 2;
+
+}
+#footer .inner .bt_wrap .bt_cscenter{
+  margin-left:20px; /*cscenter와 boardinfo 사이에 여백*/
+}
+#footer .inner .bt_wrap .bt_cscenter,
+#footer .inner .bt_wrap2 .bt_sns{width: 200px;}
+#footer .bt_cscenter .title{
+  display: none;
+}
+#footer .inner .bt_cscenter .bt_txt01{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  
+}
+#footer .inner .bt_cscenter .bt_txt02{
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
 }
 
+/* 클래스명 bt_ 시작하는 요소 */
+#footer .bt_cscenter [class^="bt_"]>strong:first-child{
+  display: none;
+}
 /* padding-right:10 해당하는 요소를 무력화 */
 #footer .inner .pdr10{
   display: none;
 }
+#footer .inner .bt_wrap2{
+  border-top: 0 none;
+}
+#footer .inner .bt_wrap2 .bt_sns .title{  display: none;}
+#footer .inner .bt_wrap2 .bt_sns a{padding:0}
+#footer .inner .bt_wrap2 .bt_sns a:nth-of-type(1){margin-left:0;}
+
+#footer .inner .bt_wrap{  margin-bottom:20px;}
+#footer .inner .bt_wrap2{padding-top:0}
+
 
 
 /* 폴더스타일 2depth 브라우저 전체너비 사용하기*/
@@ -276,21 +283,17 @@
   width: 2px;
   border-right: 1px solid #ccc;
 }
-#header .inner .top_nav_box .top_category>ul>li:nth-child(1) .sub_cate01::before, 
-#header .inner .top_nav_box .top_category>ul>li:nth-child(1) .sub-category::before {
-  content:"COMPANY";
-}
 #header .inner .top_nav_box .top_category>ul>li:nth-child(2) .sub_cate01::before, 
 #header .inner .top_nav_box .top_category>ul>li:nth-child(2) .sub-category::before {
-  content:"BUSINESS";
+  content:"아우터";
 }
 #header .inner .top_nav_box .top_category>ul>li:nth-child(3) .sub_cate01::before, 
 #header .inner .top_nav_box .top_category>ul>li:nth-child(3) .sub-category::before {
-  content:"PRODUCT";
+  content:"TOP";
 }
 #header .inner .top_nav_box .top_category>ul>li:nth-child(4) .sub_cate01::before, 
 #header .inner .top_nav_box .top_category>ul>li:nth-child(4) .sub-category::before {
-  content:"NOTICE&NEWS";
+  content:"원피스";
 }
 #header .inner .top_nav_box .top_category>ul>li:nth-child(5) .sub_cate01::before, 
 #header .inner .top_nav_box .top_category>ul>li:nth-child(5) .sub-category::before {
@@ -302,6 +305,9 @@
 
 
 /*헤더검색창 시작*/
+#header .inner .top_nav_box .top_mypage li:nth-child(2) a{
+  padding-right: 0;
+}
 #header .my_top_search{
  width: 190px;
  height: 40px;
@@ -339,5 +345,12 @@
   width:22px; height: 22px;
   position: absolute; right: 0; top:50%;
   transform: translateY(-50%);
+}
+
+
+@media (min-width:1024px){
+  #header .inner .top_nav_box .top_mypage .top_search{
+    display:none;
+  }
 }
 /*//헤더검색창 끝*/
